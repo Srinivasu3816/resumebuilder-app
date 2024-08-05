@@ -1,0 +1,66 @@
+.card-text {
+    font-size: 14px;
+    color: #888;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.maincontent{
+    display:flex;
+    margin-top: 20px;
+    margin-left: 50px;
+    
+}
+.maincontent span{
+    width:10px;
+    height: 10px;
+    border-radius: 12px;
+    margin:0 5px 0 0;
+
+}
+.maincontent span:nth-child(1){
+    background-color:red;
+}
+.maincontent span:nth-child(2){
+    background-color:green;
+}
+.maincontent span:nth-child(3){
+    background-color:yellow;
+}
+.maincontent span:nth-child(4){
+    background-color:blue;
+}
+.maincontent span:nth-child(5){
+    background-color:pink;
+}
+.maincontent span:nth-child(6){
+    background-color:blue;
+}
+.maincontent span:nth-child(7){
+    background-color:red;
+}
+.whychoose{
+    margin-top: 30px;
+    padding: 20px;
+}
+.whychoose h2{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #212121;
+    font-weight: 700;
+}
+.whychoosepara{
+    margin-left: 35px;
+}
+.whychoosepara p{
+    color:#888;
+font-size: 16px;
+letter-spacing: 1.5px;
+
+text-align: justify;
+padding: 5px;
+
+}
+.whychoosebutton button{
+    margin-left: 30px;
+}

@@ -1,0 +1,60 @@
+.hero-section-main{
+    margin-top: 100px;
+    /* border: 1px solid rgb(240, 175, 175); */
+    padding: 20px 20px;
+}
+.navbar{
+    background-color: #3e94e4 !important;
+}
+.heroparagraph{
+    padding: 10px;
+    margin-top: 50px 20px;
+
+}
+.heroparagraph p{
+font-size: 16px;
+text-align:start;
+font-family: Arial, Helvetica, sans-serif;
+margin:20px;
+color:#0e7fe9;
+background-color: #b0d5fa;
+padding: 5px; margin-left: 10px;
+border-radius: 15px;
+
+}
+.heroparagraph span{
+    font-weight: 700;
+    background-color: green;
+    border-radius: 20px;
+    color:whitesmoke;
+}
+.herotext{
+    margin: 10px 5px;
+    padding: 10px;
+}
+.herotext h1{
+    font-size: 40px;
+    /* text-align: center; */
+    line-height: 55px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: #212529;
+}
+.herodetail{
+    margin: 5px 5px;
+    padding: 5px;
+
+}
+.herodetail p{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: silver;
+}
+.whychoose h2{
+font-size: 16px;
+font-family: Arial, Helvetica, sans-serif;
+padding: 10px;
+margin-left: 20px;
+}

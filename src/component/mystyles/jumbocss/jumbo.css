@@ -1,0 +1,15 @@
+.jumbo{
+width: 70%;
+
+}
+.jumbo h5{
+    color: #13287E;
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 250px;
+}
+.jumboimg img{
+   position: relative;
+   top:150px;
+   border-top-left-radius:20px ;
+}

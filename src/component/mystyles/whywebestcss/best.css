@@ -1,0 +1,53 @@
+
+.content{
+    margin-top: 150px;
+}
+
+.maincontent{
+    display:flex;
+    margin-top: 20px;
+    margin-left: 50px;
+    
+}
+.maincontent span{
+    width:10px;
+    height: 10px;
+    border-radius: 12px;
+    margin:0 5px 0 0;
+
+}
+ .dots span{
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+}
+.dots span:nth-child(1){
+color: black;
+}
+.dots span:nth-child(2){
+    color: yellow;
+    }
+    .dots span:nth-child(3){
+        color: pink;
+        }
+        .dots span:nth-child(5){
+            color: greenyellow;
+            }
+            .dots span:nth-child(6){
+                color: green;
+                }
+                .dots span:nth-child(7){
+                    color: blue;
+                    }
+                    
+                    .content h2{
+                        margin-top: 40px;
+                        font-size: 35px;
+                        padding:10px;
+                        font-weight: 600;
+                        font-family:Arial, Helvetica, sans-serif;
+                        color: #212121;
+                    }
+                    .resumeimg{
+                        margin-top: 200px;
+                    }
