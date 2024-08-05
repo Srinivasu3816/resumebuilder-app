@@ -6,6 +6,7 @@ import { ResumeMainPage } from "./mainpage";
 
 import { MainResume } from "./resumePages/mainresume";
 import { ViewResume } from "./resumePages/viewresume";
+import { UserLists, UserresumeDetails } from "./resumePages/userresumedetails";
 export function ResumeIndex(){
     return(
         <BrowserRouter>
@@ -20,7 +21,10 @@ export function ResumeIndex(){
                 <Route path="mainresume" element={<MainResume/>}/>
             </Route> */}
             <Route path="mainresume" element={<MainResume/>}/>
-            <Route path="viewresume" element={<ViewResume/>}/>
+            <Route path="viewresume/:id" element={<ViewResume/>}/>
+            
+            
+            <Route path="userlists" element={<UserLists/>}/>
             <Route path="*" element={<PagenotFound/>}/>
         </Routes >
         </BrowserRouter>

@@ -257,7 +257,7 @@ export function ResumeHeader() {
 </div> */}
                     <div className='d-grid gap-2 d-md-flex justify-content-md-end text-center'>
                         <button type='submit' className='btn btn-primary' >Save</button>
-                        <button type='submit' className='btn btn-warning '><Link to="/viewresume" className='text-white text-decoration-none '>View Resume</Link></button>
+                        <button type='submit' className='btn btn-warning '><Link to="/userlists" className='text-white text-decoration-none '>View Lists</Link></button>
                     </div>
 
                 </form>
