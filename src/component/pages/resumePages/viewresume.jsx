@@ -10,7 +10,7 @@ export function ViewResume() {
         UserName: '',
         Email: '',
         Designation: '',
-        profilesummary: '',
+        profilesummery: '',
         CompanyName: '',
         UserRoll: '',
         RelaventExperience: '',
@@ -31,7 +31,7 @@ export function ViewResume() {
             method: 'get',
             url: `http://127.0.0.1:5080/getalldata/${params.id}`
         })
-        .then((response) => {
+        .then(response => {
             SetDetails(response.data);
             // console.log(details);
         })
@@ -40,34 +40,38 @@ export function ViewResume() {
     return (
         <div>
             <div className="container">
+                <div>
+               {/* <button className='btn btn-primary'> <Link to={`/edit/${detail.id}`} className='btn btn-warning ms-2 mt-3'>Edit</Link></button> */}
+                </div>
                 <div className="resume-header text-center">
 
 
-                    <h1>{details.UserName}</h1>
-                    <p>Hyderabad, Currently in Bangalore |{details.Degree}  in [Specialization] | 4.6 years of experience in UI with Angular</p>
+                    <h1>{details[0].UserName}</h1>
+                    <p>Hyderabad, Currently in Bangalore |{details[0].Degree}   | {details[0].YearsOfExperience} years of experience in UI with Angular</p>
                 </div>
 
                 <div className="resume-section">
                     <h2>Contact Information</h2>
                     <ul key={details.Id}>
-                        <li>Email: {details.Email}</li>
-                        <li>Phone: [Your Phone Number]</li>
+                        <li>Email: {details[0].Email}</li>
+                        {/* <li>Phone: [Your Phone Number]</li>
                         <li>LinkedIn: [Your LinkedIn Profile]</li>
-                        <li>GitHub: [Your GitHub Profile]</li>
+                        <li>GitHub: [Your GitHub Profile]</li> */}
                     </ul>
                 </div>
 
                 <div className="resume-section">
                     <h2>Summary</h2>
-                    <p>Experienced UI Developer with 4.6 years in building user-friendly and responsive web applications using Angular. Proven track record of delivering high-quality projects and improving user experience. Strong problem-solving skills and a passion for continuous learning.</p>
+                    <p>{details[0].profilesummery}</p>
+                    
                 </div>
 
                 <div className="resume-section">
                     <h2>Professional Experience</h2>
                     <div>
-                        <h3>UI Developer</h3>
-                        <p>Central Retail Corporation's E-commerce Platform</p>
-                        <p><em>[Start Date] - [End Date]</em></p>
+                        <h3>{details[0].Designation}</h3>
+                        <p>{details[0].ProjectDetails}</p>
+                        <p><em>[2023] - [2024]</em></p>
                         <ul>
                             <li>Developed and maintained e-commerce platform using Angular.</li>
                             <li>Collaborated with cross-functional teams to design and implement new features.</li>
@@ -82,8 +86,8 @@ export function ViewResume() {
                     <h2>Education</h2>
                     <ul>
                         <li>
-                            <h3>M.Tech in [Specialization]</h3>
-                            <p>[University Name], [Year]</p>
+                            <h3>{details[0].Degree}</h3>
+                            <p> {details[0].Degreeyearofpassing}</p>
                         </li>
                         {/* <!-- Add more education entries as needed --> */}
                     </ul>
@@ -92,13 +96,8 @@ export function ViewResume() {
                 <div className="resume-section">
                     <h2>Skills</h2>
                     <ul>
-                        <li>Angular</li>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                        <li>TypeScript</li>
-                        <li>Responsive Design</li>
-                        <li>Version Control (Git)</li>
+                        <li>{details[0].Technicalskills}</li>
+                        
                         {/* <!-- Add more skills as needed --> */}
                     </ul>
                 </div>
@@ -107,20 +106,20 @@ export function ViewResume() {
                     <h2>Projects</h2>
                     <ul>
                         <li>
-                            <h3>Project Title</h3>
-                            <p>Description of the project, your role, and the technologies used.</p>
+                            <h3>CRC</h3>
+                            <p>{details[0].ProjectDetails}</p>
                         </li>
                         {/* <!-- Add more projects as needed --> */}
                     </ul>
                 </div>
 
-                <div className="resume-section">
+                {/* <div className="resume-section">
                     <h2>Certifications</h2>
                     <ul>
                         <li>Certification Title, Issuing Organization, Year</li>
-                        {/* <!-- Add more certifications as needed --> */}
+                        
                     </ul>
-                </div>
+                </div> */}
             </div>
         </div>
 

@@ -84,6 +84,35 @@ app.post('/userresume', (req, res) => {
                 })
         })
 });
+app.put('/updatedata/:id',(req,res)=>{
+    var resume_id= parseInt(req.params.id);
+   
+  var userDetails = {
+                    "id": parseInt(req.body.id),
+                    "UserName": req.body.UserName,
+                    "Email": req.body.Email,
+                    "Designation": req.body.Designation,
+                    "profilesummery": req.body.profilesummery,
+                    "CompanyName": req.body.CompanyName,
+                    "UserRoll": req.body.UserRoll,
+                    "RelaventExperience": parseInt(req.body.RelaventExperience),
+                    "YearsOfExperience": parseInt(req.body.YearsOfExperience),
+                    "ProjectDetails": req.body.ProjectDetails,
+                    "Technicalskills": req.body.Technicalskills,
+                    "Ssc": req.body.Ssc,
+                    "Sscyearofpassing": parseInt(req.body.Sscyearofpassing),
+                    "Inter": req.body.Inter,
+                    "Interyearofpassing": parseInt(req.body.Interyearofpassing),
+                    "Degree": req.body.Degree,
+                    "Degreeyearofpassing": parseInt(req.body.Degreeyearofpassing)
+    }
+    mongoClient.connect(url).then(obj=>{
+        var database=obj.db('Resumeproject');
+        database.collection('resumedata').updateOne({id:resume_id}),{$set:userDetails};
+        console.log('Data Updated');
+        res.redirect('/getalldata');
+    })
+});
 // app.post('/addexperience', (req, res) => {
 //     var userDetails = {
 //         // "id": parseInt(req.body.id),
@@ -120,7 +149,7 @@ app.get('/getalldata/:id', (req, res) => {
     mongoClient.connect(url)
         .then(obj => {
             var database = obj.db('Resumeproject');
-            database.collection('resumedata').find({Id:resume_id})
+            database.collection('resumedata').find({id:resume_id})
                 .toArray().then((documents) => {
                     res.send(documents);
                    

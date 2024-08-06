@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 export function UserLists() {
-    const [resumedetails,setresumedetails] = useState([{id:0}]);
+    const [resumedetails,setresumedetails] = useState([]);
    
 useEffect(()=>{
     axios({
@@ -20,7 +20,7 @@ useEffect(()=>{
     return(
         <div className="container">
         
-            <h2 className="text-center text-danger mt-5">Welcome To Tutorial CURD Operations</h2>
+            <h2 className="text-center text-danger mt-5">User Resumes Details</h2>
             
             <table className='table table-hover mt-4'>
                 <thead>
