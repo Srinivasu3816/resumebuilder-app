@@ -10,7 +10,7 @@ import axios, { Axios } from 'axios';
 export function ResumeHeader() {
     const formik = useFormik({
         initialValues: {
-            Id: 0,
+            id: 0,
             UserName: '',
             Email: '',
             Designation: '',
@@ -56,7 +56,7 @@ export function ResumeHeader() {
                             <div className='mt-3 p-2'>
                                 <div className="mb-3">
                                     <label className="form-label">User Id</label>
-                                    <input type="number" name="Id" onChange={formik.handleChange} className="form-control" placeholder="User Name" />
+                                    <input type="number" name="id" onChange={formik.handleChange} className="form-control" placeholder="User Id" />
                                 </div>
                                 <div className="mb-3">
                                     <label className="form-label">User Name</label>
@@ -64,7 +64,7 @@ export function ResumeHeader() {
                                 </div>
                                 <div className="mb-3">
                                     <label className="form-label">Email</label>
-                                    <input type="email" name="Email" onChange={formik.handleChange} className="form-control" placeholder="User Name" />
+                                    <input type="email" name="Email" onChange={formik.handleChange} className="form-control" placeholder="User Email" />
                                 </div>
                                 <div className="mb-3">
                                     <label className="form-label">Current Designation</label>
@@ -85,7 +85,7 @@ export function ResumeHeader() {
                             <div className='mt-3 p-2'>
                                 <div className="mb-3">
                                     <label className="form-label">SSC/10Th</label>
-                                    <input type="text" name="Ssc" onChange={formik.handleChange} className="form-control" placeholder="SSC" />
+                                    <input type="text" name="Ssc" onChange={formik.handleChange} className="form-control" placeholder="SSC Board" />
                                 </div>
                                 <div className="mb-3">
                                     <label className="form-label">Year Of Passing</label>
@@ -93,7 +93,7 @@ export function ResumeHeader() {
                                 </div>
                                 <div className="mb-3">
                                     <label className="form-label">Intermediate</label>
-                                    <input type="Text" name="Inter" onChange={formik.handleChange} className="form-control" placeholder="Intermediate" />
+                                    <input type="Text" name="Inter" onChange={formik.handleChange} className="form-control" placeholder="Intermediate Board" />
                                 </div>
                                 <div className="mb-3">
                                     <label className="form-label"> Intermediate Year of passing</label>

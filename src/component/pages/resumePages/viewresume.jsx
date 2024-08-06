@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios, { Axios } from 'axios';
-import '../resumePages/resumecss/viewresumecss/view.css'
 import { useParams } from 'react-router-dom';
-// import { response } from 'express';
+import '../resumePages/resumecss/viewresumecss/view.css'
 export function ViewResume() {
     const params = useParams();
     const [details, SetDetails] = useState([
@@ -30,10 +29,11 @@ export function ViewResume() {
     useEffect(() => {
         axios({
             method: 'get',
-            url: `http://127.0.0.1:5080/getresumedata/${params.id}`
+            url: `http://127.0.0.1:5080/getalldata/${params.id}`
         })
-        .then(response => {
-            SetDetails(response.data)
+        .then((response) => {
+            SetDetails(response.data);
+            // console.log(details);
         })
     }, []);
 
@@ -43,14 +43,14 @@ export function ViewResume() {
                 <div className="resume-header text-center">
 
 
-                    <h1>{details[0].UserName}</h1>
-                    <p>Hyderabad, Currently in Bangalore |{details[0].Degree}  in [Specialization] | 4.6 years of experience in UI with Angular</p>
+                    <h1>{details.UserName}</h1>
+                    <p>Hyderabad, Currently in Bangalore |{details.Degree}  in [Specialization] | 4.6 years of experience in UI with Angular</p>
                 </div>
 
                 <div className="resume-section">
                     <h2>Contact Information</h2>
-                    <ul key={details[0].id}>
-                        <li>Email: {details[0].Email}</li>
+                    <ul key={details.Id}>
+                        <li>Email: {details.Email}</li>
                         <li>Phone: [Your Phone Number]</li>
                         <li>LinkedIn: [Your LinkedIn Profile]</li>
                         <li>GitHub: [Your GitHub Profile]</li>
